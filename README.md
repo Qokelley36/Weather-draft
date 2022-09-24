@@ -9,7 +9,7 @@ import time
 print('Welcome to the Weather forecast! Here you can get the current weather data for most major cities.\n'
       "\nFor a weather forecast, please enter the 5 digit U.S. Zip Code for your desired location \n"
       "or the city's name, comma, and 2-letter country code, examples are below.\n"
-      'inputs made without a country code may return inaccurate results / cities.\n'
+      'inputs made without a country code will return inaccurate results.\n'
       "Examples are... Oxford, GB - Las Vegas, US - Moscow, RU... \n")
 
 
@@ -17,7 +17,7 @@ def main():
     #Main function for the program, allows user to input a zip code or city to receive forecast
     url = 'https://api.openweathermap.org/data/2.5/weather'
     url_ext = 'https://api.openweathermap.org/data/2.5/forecast'
-    location = input('Please enter the Zip Code or City, Country: ')
+    location = input('Please enter the Zip Code or City, Country code: ')
     while True:
         try:
             weather_current(location, url)
